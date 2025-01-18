@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.app.dark {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f4f4f9;
+}
+
+/* .app.dark body{
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+} */
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #2b2220, #485da1);
+  color: white;
+  border-radius: 10px;
+  flex-wrap: wrap; /* Wrap elements on small screens */
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background 0.5s;
+}
+
+header button:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+/* Form Container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+textarea,
+input {
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+textarea:focus,
+input:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Recipe Cards */
+.recipe {
+  margin: 0.5rem;
+  border-radius: 10px;
+  padding: 15px;
+  background: linear-gradient(to left, #fdfbfb, #ebed);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  border: 1px silver solid ;
+}
+.app.dark .recipe{
+  background: inherit;
+}
+
+.recipe:hover {
+  transform: scale(1.01);
+}
+
+.recipe h3 {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+}
+
+.recipe-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Stack buttons if space is tight */
+}
+
+/* Shopping List */
+.shopping-list {
+  background: wheat;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.app.dark .shopping-list{
+  background: linear-gradient(to left, #fdfbfb, rgba(68, 3, 68, 0.867));
+  color : aliceblue;
+}
+
+/* Responsive Design */
+
+/* Tablets (Max width: 768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .form-container {
+    padding: 10px;
+  }
+
+  textarea,
+  input {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .recipe h3 {
+    font-size: 1.3rem;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile Devices (Max width: 480px) */
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+    gap: 5px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .form-container {
+    gap: 10px;
+  }
+
+  textarea,
+  input {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .recipe {
+    padding: 10px;
+    margin: 5px 0;
+  }
+
+  .recipe h3 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
